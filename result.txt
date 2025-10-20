@@ -1,0 +1,105 @@
+python bell_ibm.py
+management.get:WARNING:2025-10-20 16:55:02,349: Loading default saved account
+qiskit_runtime_service.__init__:WARNING:2025-10-20 16:55:04,994: Instance was not set at service instantiation. Free and trial plan instances will be prioritized. Based on the following filters: (tags: None, region: us-east, eu-de), and available plans: (open), the available account instances are: open-instance. If you need a specific instance set it explicitly either by using a saved account with a saved default instance or passing it in directly to QiskitRuntimeService().
+Circuit quantique créé:
+     ┌───┐     ┌─┐   
+q_0: ┤ H ├──■──┤M├───
+     └───┘┌─┴─┐└╥┘┌─┐
+q_1: ─────┤ X ├─╫─┤M├
+          └───┘ ║ └╥┘
+c: 2/═══════════╩══╩═
+                0  1 
+
+--- Test avec ordinateur quantique réel ---
+Backends disponibles:
+qiskit_runtime_service.backends:WARNING:2025-10-20 16:55:05,111: Loading instance: open-instance, plan: open
+  - ibm_brisbane
+  - ibm_torino
+qiskit_runtime_service.backends:WARNING:2025-10-20 16:55:06,374: Loading instance: open-instance, plan: open
+qiskit_runtime_service.backends:WARNING:2025-10-20 16:55:06,942: Using instance: open-instance, plan: open
+
+Backend utilisé: ibm_torino
+Transpilation du circuit pour l'architecture quantique...
+✓ Circuit transpilé
+Soumission du job sur ibm_torino...
+Job ID: d3r4qj3nquss73e72ki0
+Attendez... (cela peut prendre quelques secondes ou minutes)
+
+Résultats: {'00': 49, '11': 51}
+
+🎯 Résultats attendus pour un Bell State:
+   ~50% de |00⟩ et ~50% de |11⟩ (intrication quantique)
+
+⚠️  Note: Sur un vrai ordinateur quantique, vous verrez aussi
+   quelques |01⟩ et |10⟩ à cause du bruit quantique!
+
+✓ Test réussi! Vous avez exécuté votre circuit sur ibm_torino
+   C'est un VRAI ordinateur quantique IBM! 🚀
+
+
+
+
+   {'00': 49, '11': 51}
+```
+
+### **Traduction :**
+
+Vous avez fait **100 mesures** (100 "lancers de pièces quantiques") :
+
+- **`00` : 49 fois** → Les deux qubits valaient **0** (Pile-Pile)
+- **`11` : 51 fois** → Les deux qubits valaient **1** (Face-Face)
+
+---
+
+## 🎯 **Pourquoi c'est incroyable ?**
+
+### **Résultat normal (ordinateur classique) :**
+Si vous lanciez 2 pièces normales 100 fois, vous auriez :
+```
+00: ~25 fois  (Pile-Pile)
+01: ~25 fois  (Pile-Face)
+10: ~25 fois  (Face-Pile)
+11: ~25 fois  (Face-Face)
+```
+**4 possibilités** également réparties.
+
+### **Votre résultat (ordinateur quantique) :**
+```
+00: 49 fois  ✅
+11: 51 fois  ✅
+01: 0 fois   ❌ IMPOSSIBLE !
+10: 0 fois   ❌ IMPOSSIBLE !
+```
+**Seulement 2 possibilités** !
+
+---
+
+## 🔗 **Ce que ça prouve :**
+
+Les deux qubits sont **intriqués** (magiquement liés) :
+
+- Quand qubit 1 = **0** → qubit 2 = forcément **0**
+- Quand qubit 1 = **1** → qubit 2 = forcément **1**
+
+**Ils sont toujours identiques !** C'est comme si les deux pièces communiquaient instantanément, même si elles sont éloignées ! 👻
+
+---
+
+## 🎲 **Analogie simple :**
+
+Imaginez deux dés magiques :
+- Vous lancez les deux dés
+- Ils tombent **toujours** sur le même chiffre
+- Si l'un montre 3, l'autre montre forcément 3
+- Si l'un montre 6, l'autre montre forcément 6
+
+**C'est IMPOSSIBLE avec des dés normaux**, mais c'est exactement ce qui se passe avec vos qubits quantiques ! 🎲🎲
+
+---
+
+## 📈 **Vos résultats en image :**
+```
+49 fois : 00  ████████████████████████ 49%
+51 fois : 11  ████████████████████████ 51%
+ 0 fois : 01  
+ 0 fois : 10
