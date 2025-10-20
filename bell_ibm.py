@@ -5,7 +5,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
 
 # 1. Configuration - Remplacez par votre token IBM Quantum
 # Obtenez votre token sur: https://quantum.ibm.com/
-TOKEN = "z5YOGZM1HHwUc4QRdRarvmIKgIvmCIRdLofsRFNc6rIA"
+TOKEN = "API_KEY"
 
 # Sauvegarde du token (à faire une seule fois)
 QiskitRuntimeService.save_account(channel="ibm_quantum_platform", token=TOKEN, overwrite=True)
